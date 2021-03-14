@@ -1,9 +1,0 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "TEST HUGO SITE"
-theme = "hugo-notepadium"
-canonifyurls = true
-baseurl = "https://mitsuki-n.github.io/gh-pages-sample2/"
-
-[params]
-style = "dark"
