@@ -1,5 +1,5 @@
 baseURL = "https://mitsuki-n.github.io/gh-pages-sample2/"
-languageCode = "ja-ja"
+languageCode = "ja"
 title = "TEST HUGO SITE"
 theme = "hugo-notepadium"
 canonifyurls = true
