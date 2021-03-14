@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>.gitignoreについて調べる&nbsp;&ndash;&nbsp;TEST HUGO SITE</title><link rel="stylesheet" href="/css/core.min.e755e554a9f2abc4a79420b876472172af29867bcd4d57b0639b85accc6a58a52829d959db4cef00b3b028c46b684923.css" integrity="sha384-51XlVKnyq8SnlCC4dkchcq8phnvNTVewY5uFrMxqWKUoKdlZ20zvALOwKMRraEkj"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content=".gitignoreについて調べる" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">TEST HUGO SITE</span></a></span>
+        <span class="header right-side"></span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">.gitignoreについて調べる</h1><p class="article date">2021-01-04</p></section><article class="article markdown-body"><p>yo codeで生成したVSCode拡張機能のフォルダを整理していたら、Gitの更新対象が大量に出てきたので調べた。</p>
+<h2 id="調べた結果">調べた結果</h2>
+<p>Gitの設定ファイルである.gitignoreを削除したことが原因だった。
+.gitignoreはGitで管理しないファイル及びフォルダを指定するための設定ファイルとのこと。</p>
+<p>今回の件だと、.gitignoreに記載されていたnode_modulesフォルダがGitの管理対象になってしまったことでGitの更新対象が大量にでてきたというわけだ。</p>
+<p>ところで、どんなファイルとフォルダを.gitignoreに記載すればいいのか気になったので調べてみると下記とのこと。</p>
+<blockquote>
+<p>/node_modulesまたは/packagesの内容などの依存関係キャッシュ<br>
+.o、.pyc、および.classファイルなどのコンパイル済みコード<br>
+/bin、/out、/targetなどの出力ディレクトリを構築する<br>
+.log、.lock、.tmpなど、実行時に生成されるファイル<br>
+.DS_StoreやThumbs.dbなどの隠しシステムファイル<br>
+.idea/workspace.xmlなどのpersonal IDE設定ファイル<br>
+<a href="https://www.it-swarm.jp.net/ja/git/%E6%AD%A3%E7%A2%BA%E3%81%AB%E3%81%AFgitignore%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F/1049933054/#:~:text=01%2F08%20Zahachos-,.,%E3%81%AB%E3%81%A8%E3%81%A3%E3%81%A6%E3%81%AF%E5%BD%B9%E3%81%AB%E7%AB%8B%E3%81%A1%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82"target="_blank" rel="noopener noreferrer">正確には.gitignoreとは何ですか？</a>
+</p>
+</blockquote>
+<h2 id="参考ページ">参考ページ</h2>
+<p><a href="https://qiita.com/inabe49/items/16ee3d9d1ce68daa9fff"target="_blank" rel="noopener noreferrer">.gitignore の書き方</a>
+<br>
+<a href="https://qiita.com/anqooqie/items/110957797b3d5280c44f"target="_blank" rel="noopener noreferrer">[Git] .gitignoreの仕様詳解</a>
+</p>
+</article>
+</div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/2021-01-16/"><span class="iconfont icon-article"></span>VSCode拡張機能のパッケージ化</a></p><p><a class="link" href="/posts/2021-01-02/"><span class="iconfont icon-article"></span>Verilogのインデントを自動整形するVSCodeの拡張機能を作った</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">TEST HUGO SITE</p>
+    <p class="powerby"><span>Powered&nbsp;by&nbsp;</span><a href="https://gohugo.io" 
+        target="_blank" rel="noopener noreferrer">Hugo</a><span>&nbsp;&amp;&nbsp;</span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank" rel="noopener noreferrer">Notepadium</a></p></div>
+</section></body>
+
+</html>

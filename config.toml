@@ -1,0 +1,7 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "TEST HUGO SITE"
+theme = "hugo-notepadium"
+
+[params]
+style = "dark"

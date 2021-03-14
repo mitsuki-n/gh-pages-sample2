@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Verilogのインデントを自動整形するPythonスクリプトを書いた&nbsp;&ndash;&nbsp;TEST HUGO SITE</title><link rel="stylesheet" href="/css/core.min.e755e554a9f2abc4a79420b876472172af29867bcd4d57b0639b85accc6a58a52829d959db4cef00b3b028c46b684923.css" integrity="sha384-51XlVKnyq8SnlCC4dkchcq8phnvNTVewY5uFrMxqWKUoKdlZ20zvALOwKMRraEkj"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Verilogのインデントを自動整形するPythonスクリプトを書いた" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">TEST HUGO SITE</span></a></span>
+        <span class="header right-side"></span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Verilogのインデントを自動整形するPythonスクリプトを書いた</h1><p class="article date">2020-12-13</p></section><article class="article markdown-body"><p>Verilog のコードでインデントだけを整形してくれるフォーマッタが欲しいと思ったので作った。<br>
+使い方は引数に整形したいファイルを指定して実行すれば ok。</p>
+<p><a href="https://github.com/mitsuki-n/verilog-indenter">https://github.com/mitsuki-n/verilog-indenter</a></p>
+<pre><code>./verilog-indent.py [整形したい Verilog ファイル名]
+</code></pre>
+<p>整形前</p>
+<pre><code>module counter(
+input CLK,
+input RESET,
+output reg [31:0] COUNT
+);
+always @(posedge CLK) begin
+if (RESET == 1'b1) begin
+COUNT &lt;= 32'd0;
+end else begin
+COUNT &lt;= COUNT + 32'd1;
+endcount
+end
+end
+endmodule
+</code></pre>
+<p>整形後</p>
+<pre><code>module counter(
+    input             CLK,
+    input             RESET,
+    output reg [31:0] COUNT
+);
+    always @(posedge CLK) begin
+        if (RESET == 1'b1) begin
+            COUNT &lt;= 32'd0;
+        end else begin
+            COUNT &lt;= COUNT + 32'd1;
+        end
+    end
+endmodule
+</code></pre>
+<p>VS Code と連携させてファイル保存時に自動整形とかさせたい…</p>
+</article>
+</div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/posts/2020-12-30/"><span class="iconfont icon-article"></span>VSCode拡張機能開発　現在開いているドキュメントのテキスト取得方法</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">TEST HUGO SITE</p>
+    <p class="powerby"><span>Powered&nbsp;by&nbsp;</span><a href="https://gohugo.io" 
+        target="_blank" rel="noopener noreferrer">Hugo</a><span>&nbsp;&amp;&nbsp;</span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank" rel="noopener noreferrer">Notepadium</a></p></div>
+</section></body>
+
+</html>
